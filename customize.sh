@@ -1,8 +1,8 @@
 #!/bin/bash
 #=================================================
 # Description: DIY script
-# Lisence: MIT
-# Author: eSirPlayground
+# Lisence: MIT 
+# Author: eSirPlayground1
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 #1. Modify default IP
