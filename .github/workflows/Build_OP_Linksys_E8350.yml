@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm n
 #=================================================
 
-name: Build_OP_EA8350
+name: Build_OP_Linksys_E8350
 
 on: 
   release:
@@ -79,9 +79,9 @@ jobs:
     #    git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
     #    git clone "your_github_link" package/"your_folder_name"      
 
-    - name: Configuration Customization - Build_OP_EA8350
+    - name: Configuration Customization - Build_OP_Linksys_E8350
       env:
-        CONFIG_FILE: 'EA8350.config'
+        CONFIG_FILE: 'Linksys_E8350.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
