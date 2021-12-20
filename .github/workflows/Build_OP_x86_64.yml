@@ -4,7 +4,6 @@
 # Author: eSirPlayground
 # Youtube Channel: https://goo.gl/fvkdwm n
 #=================================================
-
 name: OpenWrt-CI
 
 on: 
