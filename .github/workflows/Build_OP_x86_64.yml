@@ -22,16 +22,26 @@ on:
     types: [started]
 
 jobs:
-  build:
+
+  build_openwrt:
+
+    name: Build OpenWrt firmware
+
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
+    if: github.event.repository.owner.id == github.event.sender.id
 
-    - name: Initialization environment
-      env:
-        DEBIAN_FRONTEND: noninteractive
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Space cleanup
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
           docker rmi `docker images -q`
           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d /usr/local/lib/android
           sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* adoptopenjdk* mysql* php* mongodb* dotnet* moby* snapd* || true
