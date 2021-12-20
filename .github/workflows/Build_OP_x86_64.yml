@@ -24,7 +24,6 @@ on:
 jobs:
 
   build_openwrt:
-
     name: Build OpenWrt firmware
 
     runs-on: ubuntu-latest
