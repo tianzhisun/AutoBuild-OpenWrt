@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm n
 #=================================================
 
-name: OpenWrt-CI
+name: Build_OP_x86_64
 
 on:
   schedule:
