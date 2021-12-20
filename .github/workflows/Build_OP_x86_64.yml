@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm n
 #=================================================
 
-name: Build_x86_64
+name: OpenWrt-CI
 
 on: 
   release:
@@ -24,6 +24,7 @@ on:
 jobs:
 
   build_openwrt:
+  
     name: Build OpenWrt firmware
 
     runs-on: ubuntu-latest
